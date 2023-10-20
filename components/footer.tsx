@@ -11,18 +11,16 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="rounded-lg bg-white shadow dark:bg-gray-800">
-      <div className="mx-auto w-full max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
-        <ul className="font-2xl mt-3 flex flex-wrap items-center text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <footer className="mb-2 rounded-lg border bg-background p-4 shadow-xl dark:bg-gray-800">
+      <div className="mx-auto w-full max-w-screen-xl md:flex md:items-center md:justify-between">
+        <div className="text-sm text-gray-500 dark:text-gray-400 sm:text-center font-ubuntu">© 2023 <a href="https://www.edndacomputer.xyz/" className="hover:underline">edndacomputer™</a>. All Rights Reserved.</div>
+        <div className="flex space-x-3">
           {socialMediaLinks.map((link, index) => (
-            <li key={index}>
-              <a href={link.url} className="mr-4 hover:underline md:mr-6">
+              <a href={link.url} key={index} className="text-xl opacity-80 hover:opacity-60">
                 {link.icon}
               </a>
-            </li>
           ))}
-        </ul>
+        </div>
       </div>
     </footer>
   );
