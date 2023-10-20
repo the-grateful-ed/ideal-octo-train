@@ -5,6 +5,7 @@ import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
 import Header from "@/components/header"
 import { Ubuntu, Poppins } from 'next/font/google';
+import Footer from "@/components/footer"
 
 const ubuntu = Ubuntu({ 
   subsets: ['latin'],
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 </nav>
               </div>
             <main>{children}</main>
+        <Footer />
           </div>
           <Analytics />
         </ThemeProvider>
