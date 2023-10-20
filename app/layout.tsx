@@ -1,12 +1,10 @@
-import Link from "next/link"
-
 import "./globals.css"
 import { Poppins, Ubuntu } from "next/font/google"
 
 import { Analytics } from "@/components/analytics"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
-import { ModeToggle } from "@/components/mode-toggle"
+import { Nav } from "@/components/nav"
 import { ThemeProvider } from "@/components/theme-provider"
 
 const ubuntu = Ubuntu({
@@ -41,6 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               header="edndacomputer"
               subheader="a blog about computers and the current state of the internet."
             />
+            <Nav />
             <main className="flex grow flex-col">{children}</main>
             <Footer />
           </div>
