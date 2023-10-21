@@ -1,18 +1,43 @@
+"use client"
+
 import Link from "next/link"
+import { CalendarIcon, HomeIcon } from "@radix-ui/react-icons"
 
-import { ModeToggle } from "@/components/mode-toggle"
+import { useActivePath } from "./helper"
 
-interface NavProps {
-  // Define any props your Nav component needs here
+type NavigationItem = {
+  href: string
+  icon: React.ComponentType
+  name: string
 }
 
-export const Nav: React.FC<NavProps> = () => {
+const navigation: NavigationItem[] = [
+  { href: "/", icon: HomeIcon, name: "Home" },
+  // { href: "/feedback", icon: UsersIcon, name: "Feedback" },
+  // { href: "/roadmap", icon: FolderIcon, name: "Roadmap" },
+  { href: "/comments", icon: CalendarIcon, name: "Comments" },
+]
+
+export function Nav() {
+  const checkActivePath = useActivePath()
+
   return (
-    <nav className="flex flex-row justify-around py-3 font-poppins">
-      <ModeToggle />
-      <Link href="/">Home</Link>
-      <Link href="/contact">Contact</Link>
-      <Link href="/about">About Me</Link>
+    <nav className="py-3 text-lg font-semibold">
+      <ul className="flex justify-between">
+        {navigation.map(({ href, icon: Icon, name }) => (
+          <li key={href} className="flex justify-between">
+            <Link
+              href={href}
+              className={`flex items-center space-x-1 ${
+                checkActivePath(href) ? "text-blue-500" : ""
+              }`}
+            >
+              <Icon />
+              <span>{name}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }
