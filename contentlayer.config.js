@@ -21,33 +21,12 @@ export const Page = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    publishedAt: {
-      type: "date",
-      required: true,
-    },
-    updatedAt: {
-      type: "date",
-      required: true,
-    },
     description: {
       type: "string",
-      required: true,
     },
-    image: {
-      type: "string",
+    date: {
+      type: "date",
       required: true,
-    },
-    isPublished: {
-      type: "boolean",
-      required: true,
-    },
-    author: {
-      type: "string",
-      required: true,
-    },
-    tags: {
-      type: "list",
-      of: { type: "string" },
     },
   },
   computedFields,
@@ -62,11 +41,33 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
+    publishedAt: {
+      type: "date",
+      required: true,
+    },
+    updatedAt: {
+      type: "date",
+      required: true,
+    },
     description: {
       type: "string",
+      required: true,
     },
-    date: {
-      type: "date",
+    image: {
+      type: "image",
+      required: true,
+    },
+    isPublished: {
+      type: "boolean",
+      required: true,
+    },
+    author: {
+      type: "string",
+      required: true,
+    },
+    tags: {
+      type: "list",
+      of: { type: "string" },
       required: true,
     },
   },
