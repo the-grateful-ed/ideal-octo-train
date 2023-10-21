@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Code2, Contact, Home, Microscope } from "lucide-react"
 
 import { useActivePath } from "./helper"
+import { ModeToggle } from "./mode-toggle"
 
 type NavigationItem = {
   href: string
@@ -23,7 +24,7 @@ export function Nav() {
 
   return (
     <nav className="py-3 text-lg font-semibold">
-      <ul className="flex justify-between">
+      <ul className="flex items-center justify-between">
         {navigation.map(({ href, icon: Icon, name }) => (
           <li key={href} className="flex justify-between">
             <Link
@@ -37,6 +38,9 @@ export function Nav() {
             </Link>
           </li>
         ))}
+        <li>
+          <ModeToggle />
+        </li>
       </ul>
     </nav>
   )
