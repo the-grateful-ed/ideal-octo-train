@@ -9,8 +9,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
-  weight: ["400", "700"],
   variable: "--font-ubuntu",
+  weight: "300",
 })
 
 const poppins = Poppins({

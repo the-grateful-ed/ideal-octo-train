@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { CalendarIcon, HomeIcon } from "@radix-ui/react-icons"
+import { Code2, Contact, Home, Microscope } from "lucide-react"
 
 import { useActivePath } from "./helper"
 
@@ -12,10 +12,10 @@ type NavigationItem = {
 }
 
 const navigation: NavigationItem[] = [
-  { href: "/", icon: HomeIcon, name: "Home" },
-  // { href: "/feedback", icon: UsersIcon, name: "Feedback" },
-  // { href: "/roadmap", icon: FolderIcon, name: "Roadmap" },
-  { href: "/comments", icon: CalendarIcon, name: "Comments" },
+  { href: "/", icon: Home, name: "Home" },
+  { href: "/about", icon: Microscope, name: "About" },
+  { href: "/posts/page.tsx", icon: Code2, name: "Posts" },
+  { href: "/contact", icon: Contact, name: "Contact" },
 ]
 
 export function Nav() {
@@ -29,7 +29,7 @@ export function Nav() {
             <Link
               href={href}
               className={`flex items-center space-x-1 ${
-                checkActivePath(href) ? "text-blue-500" : ""
+                checkActivePath(href) ? "text-primary" : ""
               }`}
             >
               <Icon />

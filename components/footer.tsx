@@ -11,21 +11,18 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="mb-2 rounded-lg border bg-background p-4 shadow-xl dark:bg-gray-800">
-      <div className="mx-auto w-full max-w-screen-xl md:flex md:items-center md:justify-between">
-        <div className="font-ubuntu text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-          © 2023{" "}
-          <a href="https://www.edndacomputer.xyz/" className="hover:underline">
-            edndacomputer™
-          </a>
-          . All Rights Reserved.
+    <footer className="m-2 rounded-lg border bg-background p-2 shadow-xl">
+      <div className="mx-auto flex w-full flex-col justify-center space-y-1.5 md:flex-row md:items-center md:justify-between">
+        <div className="text-center font-ubuntu text-sm ">
+          © 2023 <a href="https://www.edndacomputer.xyz/">edndacomputer™</a>.
+          All Rights Reserved.
         </div>
-        <div className="flex space-x-3">
+        <div className="flex justify-center space-x-3">
           {socialMediaLinks.map((link, index) => (
             <a
               href={link.url}
               key={index}
-              className="text-xl opacity-80 hover:opacity-60"
+              className="stroke-current text-xl hover:text-primary"
             >
               {link.icon}
             </a>
