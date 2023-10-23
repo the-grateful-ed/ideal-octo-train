@@ -11,7 +11,7 @@ export default function Home() {
           key={post._id}
           className="my-1.5 flex flex-col rounded-xl border-y sm:flex-row sm:border sm:border-border"
         >
-          <div className="relative w-full shrink-0 overflow-hidden pt-[40%] sm:max-w-[15rem] sm:rounded-l-xl sm:rounded-r-none sm:rounded-t-xl md:max-w-xs">
+          <div className="relative h-auto w-full shrink-0 overflow-hidden pt-[45%] sm:max-w-[30%] sm:rounded-l-xl sm:rounded-r-none sm:pt-[25%] lg:max-w-[30%]">
             <Image
               src={post.image}
               alt="post.title"
@@ -20,7 +20,7 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-wrap">
-            <div className="flex h-full flex-col p-4 sm:p-7">
+            <div className="flex h-auto flex-col p-4 sm:p-7">
               <h3 className="text-lg font-bold">{post.title}</h3>
               <div className="mt-1 text-gray-800 dark:text-gray-400">
                 {post.description && <p>{post.description}</p>}{" "}

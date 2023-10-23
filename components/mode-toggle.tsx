@@ -12,7 +12,11 @@ export function ModeToggle() {
       className="flex h-6 w-6 items-center justify-center rounded-md border"
     >
       <span className="sr-only">Toggle mode</span>
-      {theme !== "dark" ? <Moon /> : <Sun />}
+      {theme !== "dark" ? (
+        <Moon className="hover:fill-blue-300" />
+      ) : (
+        <Sun className="hover:fill-yellow-500" />
+      )}
     </button>
   )
 }
