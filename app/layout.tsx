@@ -31,10 +31,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`min-h-screen bg-background text-slate-900 antialiased dark:text-slate-50 ${ubuntu.variable} ${poppins.variable}`}
+        className={`mx-auto min-h-screen max-w-2xl bg-background antialiased ${ubuntu.variable} ${poppins.variable}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="mx-auto flex min-h-screen max-w-2xl flex-col px-4 pt-10">
+          <div className="flex min-h-screen  flex-col pt-10">
             <Header
               header="edndacomputer"
               subheader="a blog about computers and the current state of the internet."

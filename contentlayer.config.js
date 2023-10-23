@@ -53,10 +53,7 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    image: {
-      type: "image",
-      required: true,
-    },
+    image: { type: "string", required: true },
     isPublished: {
       type: "boolean",
       required: true,

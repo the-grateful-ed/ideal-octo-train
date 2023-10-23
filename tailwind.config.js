@@ -11,11 +11,15 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
     },
     extend: {
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       fontFamily: {
         ubuntu: ["var(--font-ubuntu)"],
         poppins: ["var(--font-poppins)"],
