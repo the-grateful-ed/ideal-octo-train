@@ -31,17 +31,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`mx-auto min-h-screen max-w-2xl bg-background antialiased ${ubuntu.variable} ${poppins.variable}`}
+        className={`min-h-screen bg-primary antialiased ${ubuntu.variable} ${poppins.variable}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex min-h-screen  flex-col pt-10">
-            <Header
-              header="edndacomputer"
-              subheader="a blog about computers and the current state of the internet."
-            />
-            <Nav />
-            <main className="flex grow flex-col">{children}</main>
-            <Footer />
+          <div className="mx-auto  flex min-h-screen max-w-2xl flex-col bg-background pt-10">
+            <div className="sm:mx-2.5">
+              <Header
+                header="edndacomputer"
+                subheader="a blog about computers and the current state of the internet."
+              />
+              <Nav />
+              <main className="my-5 flex grow flex-col">{children}</main>
+              <Footer />
+            </div>
           </div>
           <Analytics />
         </ThemeProvider>

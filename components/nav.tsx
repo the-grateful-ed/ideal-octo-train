@@ -23,8 +23,8 @@ export function Nav() {
   const checkActivePath = useActivePath()
 
   return (
-    <nav className="py-3 text-lg font-semibold">
-      <ul className="flex items-center justify-between">
+    <nav className="py-4 text-lg font-semibold">
+      <ul className="mx-1.5 flex items-center justify-between sm:mx-0">
         {navigation.map(({ href, icon: Icon, name }) => (
           <li key={href} className="flex justify-between">
             <Link
@@ -33,7 +33,9 @@ export function Nav() {
                 checkActivePath(href) ? "text-primary" : ""
               }`}
             >
-              <Icon />
+              <span className="hidden sm:inline-flex">
+                <Icon />
+              </span>
               <span>{name}</span>
             </Link>
           </li>

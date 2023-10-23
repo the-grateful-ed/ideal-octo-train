@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             <a
               href={link.url}
               key={index}
-              className="stroke-current text-xl hover:text-primary"
+              className="ml-2 stroke-current text-xl hover:text-primary"
             >
               {link.icon}
             </a>
