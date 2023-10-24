@@ -54,7 +54,7 @@ export default async function PostPage({ params }: PostProps) {
 
   return (
     <article
-      className="rose mx-auto w-full py-6 dark:prose-invert"
+      className="prose mx-auto w-full py-6 dark:prose-invert"
       itemScope
       itemType="http://schema.org/BlogPosting"
     >

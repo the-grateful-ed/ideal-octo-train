@@ -31,11 +31,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`min-h-screen bg-[#03D82E] antialiased ${ubuntu.variable} ${poppins.variable}`}
+        className={`min-h-screen bg-primary antialiased ${ubuntu.variable} ${poppins.variable}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="mx-auto  flex min-h-screen flex-col bg-background pt-10 sm:max-w-2xl lg:max-w-3xl">
-            <div className="sm:mx-2.5">
+          <div className="mx-auto  flex min-h-screen flex-col bg-background pt-10 sm:max-w-2xl">
+            <div className="mx-1 sm:mx-4">
               <Header
                 header="edndacomputer"
                 subheader="a blog about computers and the current state of the internet."

@@ -42,6 +42,31 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
+        },
+        {
+          "title": "publishedAt",
+          "name": "publishedAt",
+          "type": "datetime"
+        },
+        {
+          "title": "updatedAt",
+          "name": "updatedAt",
+          "type": "datetime"
+        },
+        {
+          "title": "image",
+          "name": "image",
+          "type": "image"
+        },
+        {
+          "title": "author",
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "title": "isPublished",
+          "name": "isPublished",
+          "type": "datetime"
         }
       ]
     }
