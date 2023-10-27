@@ -67,6 +67,10 @@ export const Post = defineDocumentType(() => ({
       of: { type: "string" },
       required: true,
     },
+    slug: {
+      type: "string",
+      required,
+    },
   },
   computedFields,
 }))
@@ -74,4 +78,5 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Post, Page],
+  remarkPlugins: [remarkSmartypants],
 })
