@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
+import remarkSmartypants from "remark-smartypants"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
