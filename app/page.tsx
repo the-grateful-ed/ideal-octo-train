@@ -16,7 +16,7 @@ export default function Home() {
               src={post.image}
               alt="post.title"
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "contain" }}
             />
           </div>
           <div className="flex flex-wrap">

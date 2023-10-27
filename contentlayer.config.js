@@ -70,7 +70,7 @@ export const Post = defineDocumentType(() => ({
     },
     slug: {
       type: "string",
-      required,
+      required: true,
     },
   },
   computedFields,
