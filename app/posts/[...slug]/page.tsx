@@ -3,6 +3,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { allPosts } from "contentlayer/generated"
 
+import { formatDate } from "@/lib/utils"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Mdx } from "@/components/mdx-components"
@@ -54,7 +55,7 @@ export default async function PostPage({ params }: PostProps) {
 
   return (
     <article
-      className="prose mx-auto w-full py-6 dark:prose-invert"
+      className="prose mx-auto w-full rounded-xl bg-card p-2 py-6 shadow-lg dark:prose-invert"
       itemScope
       itemType="http://schema.org/BlogPosting"
     >
@@ -64,9 +65,7 @@ export default async function PostPage({ params }: PostProps) {
           className="h-auto w-full rounded-lg bg-center object-cover object-center"
           alt="Kutty"
         />
-        <p className="mb-2 mt-6 text-xs font-semibold uppercase tracking-wider text-primary">
-          Development
-        </p>
+        <Badge variant={"secondary"}>Development</Badge>
         <h1
           className="mx-auto mb-3 text-3xl font-bold leading-tight md:text-4xl"
           itemProp="headline"
@@ -85,16 +84,19 @@ export default async function PostPage({ params }: PostProps) {
             <Link href="#">AlpineJS</Link>
           </Badge>
         </div>
-        <Link className="flex items-center" href="#">
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-          <div className="ml-2">
-            <p className="text-sm font-semibold">Praveen Juge</p>
-            <p className="text-sm">Jan 02 2021</p>
+
+        <div className="flex flex-row">
+          <div>
+            <Avatar>
+              {/* <AvatarImage src="https://github.com/shadcn.png" /> */}
+              <AvatarFallback>EE</AvatarFallback>
+            </Avatar>
           </div>
-        </Link>
+          <div className="ml-2 flex flex-col">
+            <span className="text-sm font-semibold">{post.author}</span>
+            <span className="text-sm">{formatDate(post.updatedAt)}</span>
+          </div>
+        </div>
       </div>
 
       <div className="prose mx-auto dark:prose-invert">

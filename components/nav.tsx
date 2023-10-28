@@ -23,7 +23,7 @@ export function Nav() {
   const checkActivePath = useActivePath()
 
   return (
-    <nav className="py-4 text-lg font-semibold">
+    <nav className="mx-auto w-full rounded-xl bg-card p-2 py-4 text-lg font-semibold shadow-lg">
       <ul className="mx-1.5 flex items-center justify-between sm:mx-0">
         {navigation.map(({ href, icon: Icon, name }) => (
           <li key={href} className="flex justify-between">
