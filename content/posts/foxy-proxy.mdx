@@ -1,0 +1,140 @@
+---
+title: Foxy Proxy Setup
+description: Configuration for FoxyProxy and BurpSuite.
+publishedAt: 2023-10-28T22:38:34.013Z
+updatedAt: 2023-10-28T22:38:34.934Z
+image: /images/image-placeholder.jpg
+author: ed
+isPublished: true
+tags:
+    - productivity
+    - code
+slug: foxy-proxy-setup
+preview: /images/image-placeholder.jpg
+---
+
+> from https://cybergeeks.cloud
+
+
+Using Burp Suite and FoxyProxy in Firefox
+=========================================
+
+[Tiago Souza](https://cybergeeks.cloud/author/admincybergeeks/)2 years ago[no comment](https://cybergeeks.cloud/2021/07/usando-burp-suite-e-foxyproxy-no-firefox/#respond "Using Burp Suite and FoxyProxy in Firefox")[BurpSuite](https://cybergeeks.cloud/tag/burpsuite-2/ "BurpSuite")[EthicalHacking](https://cybergeeks.cloud/tag/ethicalhacking-2/ "EthicalHacking")[featured](https://cybergeeks.cloud/tag/featured-2/ "featured")[OWASP](https://cybergeeks.cloud/tag/owasp-2/ "OWASP")[Proxy](https://cybergeeks.cloud/tag/proxy-2/ "Proxy")[Ethical Hacking](https://cybergeeks.cloud/category/ethical-hacking-3/ "Ethical Hacking")
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/richy-great-MAYEkmn7G6E-unsplash-750x450.jpg)
+
+[](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fcybergeeks.cloud%2F2021%2F07%2Fusando-burp-suite-e-foxyproxy-no-firefox%2F)[](https://twitter.com/intent/tweet?text=Using+Burp+Suite+and+FoxyProxy+in+Firefox&url=https%3A%2F%2Fcybergeeks.cloud%2F2021%2F07%2Fusando-burp-suite-e-foxyproxy-no-firefox%2F&via=tiagovf)[](https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fcybergeeks.cloud%2F2021%2F07%2Fusando-burp-suite-e-foxyproxy-no-firefox%2F&media=https://cybergeeks.cloud/wp-content/uploads/2021/07/richy-great-MAYEkmn7G6E-unsplash-scaled.jpg&description=Using+Burp+Suite+and+FoxyProxy+in+Firefox)[](https://linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fcybergeeks.cloud%2F2021%2F07%2Fusando-burp-suite-e-foxyproxy-no-firefox%2F&title=Using+Burp+Suite+and+FoxyProxy+in+Firefox)[](https://www.reddit.com/submit?url=https%3A%2F%2Fcybergeeks.cloud%2F2021%2F07%2Fusando-burp-suite-e-foxyproxy-no-firefox%2F&title=Using+Burp+Suite+and+FoxyProxy+in+Firefox)[](mailto:?subject=Using+Burp+Suite+and+FoxyProxy+in+Firefox&BODY=I+found+this+article+interesting+and+thought+of+sharing+it+with+you.+Check+it+out%3Ahttps%3A%2F%2Fcybergeeks.cloud%2F2021%2F07%2Fusando-burp-suite-e-foxyproxy-no-firefox%2F)
+
+**Level:** Beginner | **Reading time:** 5 minutes
+
+In this article, I'll show you how to configure Burp Suite and FoxyProxy in Firefox.
+
+**Burp Suite**
+
+[![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-10.png)](https://portswigger.net/burp/communitydownload)
+
+The **Burp Suite** is an integrated platform for performing security testing on web applications. You can use it as a proxy to intercept your browser sessions to any website. This can be useful for testing against web applications, discovering vulnerabilities in websites, and maybe even making some money with a bug bounty. 🙂
+
+Burp has a free version called Community Version. To download this version go to the following site:
+
+[Download Burp Suite Community Edition -- PortSwigger](https://portswigger.net/burp/communitydownload)
+
+**FoxyProxy**
+
+FoxyProxy is an advanced proxy management tool that completely replaces Firefox's limited proxy features. For a simpler tool and less advanced configuration options, FoxyProxy Basic can be used.
+
+You can use FoxyProxy in conjunction with Burp Suite to facilitate proxy activation using Burp.
+
+After downloading, do the standard installation and we are ready to install FoxyProxy.
+
+<https://addons.mozilla.org/pt-BR/firefox/addon/foxyproxy-standard/>
+
+After installing the add-on, you will see it in the top right corner of Firefox like the image below:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-11.png)
+
+By clicking on options, we are taken to the configuration page and we will add the Burp address by clicking on Add.
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-12.png)
+
+To validate the address in Burp Suite, let's open it and go to the **Proxy** tab:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-13.png)
+
+Then click **Options** and we can see the **Burp Proxy Listener**:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-14.png)
+
+Let's copy this address to use in FoxyProxy, where we will have the result as below:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-15.png)
+
+Once saved, we will have the configuration listed as below:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-16.png)
+
+The best thing about FoxyProxy is that it is very easy to use. After the configuration we made above, just click on the green option below "**Proxy**" and it will use Burp as a proxy:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-17.png)
+
+**Configuring Burp Suite Certificate in Firefox**
+
+So that we can perform the proxy without certificate errors, let's import the burp certificate into the Firefox settings.
+
+To do this, type in the browser: http://burp/.
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-18.png)
+
+Let's click on **CA Certificate** in the upper right corner:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-19.png)
+
+Now just save the certificate:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-20.png)
+
+Let's open the Firefox settings:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-21.png)
+
+Let's search for **Certificates** and click on **View certificates**:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-22.png)
+
+Let's click on **Import** and select the downloaded certificate:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-23.png)
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-24.png)
+
+**Using Burp as a Proxy**
+
+Now let's open our Burp Suite, go to the Proxy tab and check if the "**Intercept is on**" option is enabled:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-25.png)
+
+Now let's open Firefox and select the option we configured earlier so that it uses a browsing proxy:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-26.png)
+
+Then visit any address and check that the site is not open because the interception mode is on and you need to accept to continue on Burp. If you click **Forward**, it will forward the request to the next step:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-29.png)
+
+See that I'm going to click on the plugin to share an article on Facebook here on the site and we can see this in the Burp being intercepted:
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-30.png)
+
+![](https://cybergeeks.cloud/wp-content/uploads/2021/07/image-31.png)
+
+**Conclusion**
+
+In this blog, you learned how to configure Burp Suite as a proxy and use FoxyProxy in Firefox to make it easier to configure a proxy in the browser.
+
+For more information, I leave the reference links below:
+
+[Getting started | Web Security Academy -- PortSwigger](https://portswigger.net/web-security/getting-started)
+
+[How to use Burp Suite for penetration testing -- PortSwigger](https://portswigger.net/burp/documentation/desktop/penetration-testing)
+
+Thank you!
