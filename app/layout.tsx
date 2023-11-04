@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`min-h-screen bg-primary antialiased ${ubuntu.variable} ${poppins.variable}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="mx-auto  flex min-h-screen flex-col border-2 border-black bg-gray-200 pt-10 sm:max-w-2xl">
+          <div className="mx-auto  flex min-h-screen flex-col border-2 border-black bg-gray-200 pt-4 sm:max-w-2xl">
             <div className="mx-1 sm:mx-4">
               <Header
                 header="edndacomputer"
