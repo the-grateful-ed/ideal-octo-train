@@ -16,5 +16,5 @@ export function formatDate(timestamp) {
     minute: "numeric",
   }
 
-  return date.toLocaleDateString("en-US", options)
+  return date.toLocaleDateString("en-US")
 }
