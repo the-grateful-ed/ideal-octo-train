@@ -17,7 +17,7 @@
           "type": "string"
         },
         {
-          "title": "Content preview",
+          "title": "Preview",
           "name": "preview",
           "type": "image"
         },
