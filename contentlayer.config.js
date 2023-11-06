@@ -1,5 +1,10 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files"
-import smartypants from 'remark-smartypants'
+import {
+  TextAreaField,
+  TextField,
+  defineDocumentType,
+  makeSource,
+} from "contentlayer/source-files"
+import smartypants from "remark-smartypants"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -30,6 +35,7 @@ export const Page = defineDocumentType(() => ({
       required: true,
     },
   },
+
   computedFields,
 }))
 
@@ -79,7 +85,5 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Post, Page],
-  remarkPlugins: [
-    smartypants,
-  ],
+  remarkPlugins: [smartypants],
 })

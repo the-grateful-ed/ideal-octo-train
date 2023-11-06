@@ -28,7 +28,7 @@ export function Nav() {
           <li key={href} className="flex justify-between">
             <Link
               href={href}
-              className={`flex items-center space-x-1 p-2 py-4 hover:animate-bounce ${
+              className={`flex items-center space-x-1 p-2 py-4 ${
                 checkActivePath(href) ? "text-primary" : ""
               }`}
             >

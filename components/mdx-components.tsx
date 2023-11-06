@@ -5,6 +5,7 @@ import { Code } from "bright"
 import type { MDXComponents } from "mdx/types"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
+import Spotify from "@/components/mdx/Spotify"
 import YouTube from "@/components/mdx/YouTube"
 import YouTubePlaylist from "@/components/mdx/YouTubePlaylist"
 
@@ -21,6 +22,7 @@ const components: MDXComponents = {
   pre: Code,
   YouTube,
   YouTubePlaylist,
+  Spotify,
 }
 
 interface MdxProps {
