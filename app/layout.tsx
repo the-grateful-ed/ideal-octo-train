@@ -4,7 +4,7 @@ import { Fira_Code, Poppins, Ubuntu } from "next/font/google"
 import { Analytics } from "@/components/analytics"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
-import { Nav } from "@/components/nav"
+import Nav from "@/components/nav"
 import { ThemeProvider } from "@/components/theme-provider"
 
 const ubuntu = Ubuntu({

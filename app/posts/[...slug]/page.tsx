@@ -1,12 +1,13 @@
 import { Metadata } from "next"
-import Link from "next/link"
 import { notFound } from "next/navigation"
 import { allPosts } from "contentlayer/generated"
 
 import { formatDate } from "@/lib/utils"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
+import { AvatarDemo } from "@/components/avatar"
 import { Mdx } from "@/components/mdx-components"
+import Tag from "@/components/tags"
 
 interface PostProps {
   params: {
@@ -74,23 +75,14 @@ export default async function PostPage({ params }: PostProps) {
           {post.title}
         </h1>
         <div className="mb-6 flex space-x-2">
-          <Badge>
-            <Link href="#">CSS</Link>
-          </Badge>
-          <Badge>
-            <Link href="#">Tailwind</Link>
-          </Badge>
-          <Badge>
-            <Link href="#">AlpineJS</Link>
-          </Badge>
+          {post.tags.map((tag) => (
+            <Tag key={tag} tag={tag} />
+          ))}
         </div>
 
         <div className="flex flex-row">
           <div>
-            <Avatar>
-              {/* <AvatarImage src="https://github.com/shadcn.png" /> */}
-              <AvatarFallback>EE</AvatarFallback>
-            </Avatar>
+            <AvatarDemo />
           </div>
           <div className="ml-2 flex flex-col">
             <span className="text-sm font-semibold">{post.author}</span>

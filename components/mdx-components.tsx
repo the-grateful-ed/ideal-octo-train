@@ -23,7 +23,7 @@ const components: MDXComponents = {
   img: MdxImage,
   pre: Code,
   YouTube,
-  YouTubePlaylist,
+  Playlist: YouTubePlaylist,
   Spotify,
 }
 
