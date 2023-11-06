@@ -5,6 +5,7 @@ import { Code } from "bright"
 import type { MDXComponents } from "mdx/types"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
+import MdxImage from "@/components/mdx/MdxImage"
 import Spotify from "@/components/mdx/Spotify"
 import YouTube from "@/components/mdx/YouTube"
 import YouTubePlaylist from "@/components/mdx/YouTubePlaylist"
@@ -19,6 +20,7 @@ Code.titleClassName = font.className
 
 const components: MDXComponents = {
   Image,
+  img: MdxImage,
   pre: Code,
   YouTube,
   YouTubePlaylist,

@@ -1,9 +1,4 @@
-import {
-  TextAreaField,
-  TextField,
-  defineDocumentType,
-  makeSource,
-} from "contentlayer/source-files"
+import { defineDocumentType, makeSource } from "contentlayer/source-files"
 import smartypants from "remark-smartypants"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
