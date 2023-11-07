@@ -12,7 +12,7 @@ const schema = yup.object().shape({
   message: yup.string().required("Message is required"),
 })
 
-export default () => {
+export default function ContactPage() {
   const {
     control,
     handleSubmit,
