@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { AvatarDemo } from "@/components/avatar"
 import { Mdx } from "@/components/mdx-components"
 import Tag from "@/components/tags"
+import tags from "@/components/tags"
 
 interface PostProps {
   params: {
@@ -75,9 +76,9 @@ export default async function PostPage({ params }: PostProps) {
           {post.title}
         </h1>
         <div className="mb-6 flex space-x-2">
-          {post.tags.map((tag) => (
-            <Tag key={tag} tag={tag} />
-          ))}
+          <Badge>Badge</Badge>
+          <Badge>Badge</Badge>
+          <Badge>Badge</Badge>
         </div>
 
         <div className="flex flex-row">
