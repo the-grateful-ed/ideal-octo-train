@@ -8,25 +8,32 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const nav = () => {
+const Nav = () => {
   return (
-    <NavigationMenu className="bg-white">
+    <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/about">
-            <NavigationMenuLink>About</NavigationMenuLink>
+          <Link href="/about" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              About
+            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/contact">
-            <NavigationMenuLink>Contact</NavigationMenuLink>
+          <Link href="/Posts" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Posts
+            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/posts">
-            <NavigationMenuLink>Posts</NavigationMenuLink>
+          <Link href="/contacct" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contact
+            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -34,4 +41,4 @@ const nav = () => {
   )
 }
 
-export default nav
+export default Nav
