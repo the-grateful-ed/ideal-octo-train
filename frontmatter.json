@@ -79,37 +79,38 @@
         {
           "title": "Title",
           "name": "title",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "Description",
           "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Preview",
-          "name": "preview",
-          "type": "image"
+          "type": "string",
+          "wysiwyg": true
         },
         {
           "title": "Tags",
           "name": "tags",
-          "type": "tags"
+          "type": "tags",
+          "single": true
         },
         {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
+          "title": "Category",
+          "name": "category",
+          "type": "categories",
+          "choices": ["Web", "Hacking", "Books", "Blockchain", "Code"]
         },
         {
           "title": "publishedAt",
           "name": "publishedAt",
-          "type": "datetime"
+          "type": "datetime",
+          "isPublishDate": true
         },
         {
           "title": "updatedAt",
           "name": "updatedAt",
-          "type": "datetime"
+          "type": "datetime",
+          "isModifiedDate": true
         },
         {
           "title": "image",
@@ -119,7 +120,8 @@
         {
           "title": "author",
           "name": "author",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "isPublished",

@@ -13,6 +13,10 @@ module.exports = {
       padding: "2rem",
     },
     extend: {
+      colors: {
+        "brand-blue": "#1DA1F2",
+        "brand-red": "#C82333",
+      },
       screens: {
         sm: "640px",
         md: "768px",

@@ -43,6 +43,13 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
+    author: {
+      type: "object",
+      fields: [
+        { name: "name", type: "string" },
+        { name: "image", type: "string" },
+      ],
+    },
     publishedAt: {
       type: "date",
       required: true,
@@ -70,6 +77,10 @@ export const Post = defineDocumentType(() => ({
       required: true,
     },
     slug: {
+      type: "string",
+      required: true,
+    },
+    category: {
       type: "string",
       required: true,
     },

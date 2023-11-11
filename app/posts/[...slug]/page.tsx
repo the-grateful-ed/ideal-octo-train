@@ -76,17 +76,21 @@ export default async function PostPage({ params }: PostProps) {
           {post.title}
         </h1>
         <div className="mb-6 flex space-x-2">
-          <Badge>Badge</Badge>
-          <Badge>Badge</Badge>
-          <Badge>Badge</Badge>
+          {post.tags.map((tag, index) => (
+            <Badge key={index}>{tag}</Badge>
+          ))}
         </div>
 
         <div className="flex flex-row">
           <div>
-            <AvatarDemo />
+            <img
+              src={post.author.image}
+              alt={post.author.name}
+              className="h-10 w-10 rounded-full"
+            />
           </div>
           <div className="ml-2 flex flex-col">
-            <span className="text-sm font-semibold">{post.author}</span>
+            <span className="text-sm font-semibold">{post.author.name}</span>
             <span className="text-sm">{formatDate(post.updatedAt)}</span>
           </div>
         </div>

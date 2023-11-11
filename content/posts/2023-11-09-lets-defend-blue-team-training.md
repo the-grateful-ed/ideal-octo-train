@@ -1,9 +1,9 @@
 ---
 title: Lets Defend Blue Team Training
-description: ""
+description: "Advancing my cybersecurity skills on the LetsDefend platform. Engaging in practical blue team challenges and learning from experts. #LetsDefend #BlueTeam"
 preview: /images/letsdefend-logo.png
 tags: []
-categories: []
+category: "code"
 publishedAt: 2023-11-10T04:02:12.802Z
 updatedAt: 2023-11-10T04:02:12.802Z
 image: /images/letsdefend-logo.png
