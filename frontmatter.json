@@ -27,18 +27,15 @@
           "type": "tags"
         },
         {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
-        },
-        {
           "title": "publishedAt",
           "name": "publishedAt",
+          "default": "{{now}}",
           "type": "datetime"
         },
         {
           "title": "updatedAt",
           "name": "updatedAt",
+          "default": "{{now}}",
           "type": "datetime"
         },
         {
@@ -70,7 +67,7 @@
           "title": "Date",
           "name": "date",
           "type": "datetime"
-        },
+        }
       ]
     },
     {
@@ -85,8 +82,7 @@
         {
           "title": "Description",
           "name": "description",
-          "type": "string",
-          "wysiwyg": true
+          "type": "string"
         },
         {
           "title": "Tags",
@@ -98,18 +94,19 @@
           "title": "Category",
           "name": "category",
           "type": "categories",
-          "choices": ["Web", "Hacking", "Books", "Blockchain", "Code"]
         },
         {
           "title": "publishedAt",
           "name": "publishedAt",
           "type": "datetime",
+          "default": "{{now}}",
           "isPublishDate": true
         },
         {
           "title": "updatedAt",
           "name": "updatedAt",
           "type": "datetime",
+          "default": "{{now}}",
           "isModifiedDate": true
         },
         {

@@ -81,7 +81,8 @@ export const Post = defineDocumentType(() => ({
       required: true,
     },
     category: {
-      type: "string",
+      type: "enum",
+      values: ["web", "code", "hacking", "blockchain"],
       required: true,
     },
   },
