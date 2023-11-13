@@ -67,10 +67,6 @@ export const Post = defineDocumentType(() => ({
       type: "boolean",
       required: true,
     },
-    author: {
-      type: "string",
-      required: true,
-    },
     tags: {
       type: "list",
       of: { type: "string" },
@@ -78,11 +74,6 @@ export const Post = defineDocumentType(() => ({
     },
     slug: {
       type: "string",
-      required: true,
-    },
-    category: {
-      type: "enum",
-      values: ["web", "code", "hacking", "blockchain"],
       required: true,
     },
   },

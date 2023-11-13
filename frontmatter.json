@@ -93,7 +93,7 @@
         {
           "title": "Category",
           "name": "category",
-          "type": "categories",
+          "type": "categories"
         },
         {
           "title": "publishedAt",
