@@ -27,8 +27,8 @@
           "type": "tags"
         },
         {
-          "title": "Categories",
-          "name": "categories",
+          "title": "Category",
+          "name": "category",
           "type": "categories"
         },
         {
