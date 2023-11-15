@@ -27,15 +27,18 @@
           "type": "tags"
         },
         {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
           "title": "publishedAt",
           "name": "publishedAt",
-          "default": "{{now}}",
           "type": "datetime"
         },
         {
           "title": "updatedAt",
           "name": "updatedAt",
-          "default": "{{now}}",
           "type": "datetime"
         },
         {
@@ -76,8 +79,7 @@
         {
           "title": "Title",
           "name": "title",
-          "type": "string",
-          "single": true
+          "type": "string"
         },
         {
           "title": "Description",
@@ -85,29 +87,29 @@
           "type": "string"
         },
         {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags",
-          "single": true
+          "title": "Preview",
+          "name": "preview",
+          "type": "image"
         },
         {
-          "title": "Category",
-          "name": "category",
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
           "type": "categories"
         },
         {
           "title": "publishedAt",
           "name": "publishedAt",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
+          "type": "datetime"
         },
         {
           "title": "updatedAt",
           "name": "updatedAt",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isModifiedDate": true
+          "type": "datetime"
         },
         {
           "title": "image",
@@ -117,8 +119,7 @@
         {
           "title": "author",
           "name": "author",
-          "type": "string",
-          "single": true
+          "type": "string"
         },
         {
           "title": "isPublished",
