@@ -82,7 +82,7 @@ export default async function PostPage({ params }: PostProps) {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <div className="ml-2 flex flex-col">
-            <span className="text-sm font-semibold">{post.author.name}</span>
+            <span className="text-sm font-semibold">{post.author}</span>
             <span className="text-sm">{formatDate(post.updatedAt)}</span>
           </div>
         </div>
