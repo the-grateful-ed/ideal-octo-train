@@ -1,18 +1,18 @@
+import Link from "next/link"
+
 export default function Custom404() {
   return (
     <main>
       <div className="mx-auto flex h-screen max-w-screen-xl items-center justify-start px-4 md:px-8">
         <div className="mx-auto max-w-lg space-y-3 text-center">
-          <h3 className="text-4xl font-semibold text-gray-800 sm:text-5xl">
-            Page not found
-          </h3>
+          <h3>Page not found</h3>
           <p>
             Sorry, the page you are looking for could not be found or has been
             removed.
           </p>
-          <a
+          <Link
             href="javascript:void(0)"
-            className="inline-flex items-center gap-x-1 font-medium text-primary hover:text-indigo-400"
+            className="inline-flex items-center gap-x-1 font-medium text-primary hover:text-secondary"
           >
             Go back
             <svg
@@ -27,7 +27,7 @@ export default function Custom404() {
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </main>

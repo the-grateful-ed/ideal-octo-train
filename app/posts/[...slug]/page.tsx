@@ -5,7 +5,6 @@ import { allPosts } from "contentlayer/generated"
 import { formatDate } from "@/lib/utils"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { AvatarDemo } from "@/components/avatar"
 import { Mdx } from "@/components/mdx-components"
 import Tag from "@/components/tags"
 import tags from "@/components/tags"
@@ -68,11 +67,7 @@ export default async function PostPage({ params }: PostProps) {
           alt="Kutty"
         />
         <Badge variant={"secondary"}>Development</Badge>
-        <h1
-          className="mx-auto mb-3 text-3xl font-bold leading-tight md:text-4xl"
-          itemProp="headline"
-          title={post.title}
-        >
+        <h1 itemProp="headline" title={post.title}>
           {post.title}
         </h1>
         <div className="mb-6 flex space-x-2">

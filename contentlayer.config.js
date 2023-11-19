@@ -55,7 +55,10 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    image: { type: "string", required: true },
+    image: {
+      type: "string",
+      required: true,
+    },
     isPublished: {
       type: "boolean",
       required: true,
@@ -70,6 +73,10 @@ export const Post = defineDocumentType(() => ({
       required: true,
     },
     slug: {
+      type: "string",
+      required: true,
+    },
+    categories: {
       type: "string",
       required: true,
     },
