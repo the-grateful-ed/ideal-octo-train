@@ -1,14 +1,14 @@
 ---
 title: "Firefox Interface Hacks: Unleashing UserChrome CSS"
 description: <p>Unlock Firefox's hidden interface potential! Dive into expert-recommended UserChrome.css tweaks for a browsing experience beyond the ordinary.</p>
-preview: ""
+preview: /images/usercss-store-image.png
 tags: []
 categories: []
-publishedAt: 2023-11-19T06:51:49.999Z
-updatedAt: 2023-11-19T06:51:49.999Z
-image: ""
-author: ""
-isPublished: false
+publishedAt: 2023-11-19T07:15:28.381Z
+updatedAt: 2023-11-19T07:15:28.930Z
+image: /images/usercss-store-image.png
+author: edndacomputer
+isPublished: true
 type: Post
 ---
 
