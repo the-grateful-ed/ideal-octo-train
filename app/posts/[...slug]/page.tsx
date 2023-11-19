@@ -77,13 +77,10 @@ export default async function PostPage({ params }: PostProps) {
         </div>
 
         <div className="flex flex-row">
-          <div>
-            <img
-              src={post.author.image}
-              alt={post.author.name}
-              className="h-10 w-10 rounded-full"
-            />
-          </div>
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
           <div className="ml-2 flex flex-col">
             <span className="text-sm font-semibold">{post.author.name}</span>
             <span className="text-sm">{formatDate(post.updatedAt)}</span>
